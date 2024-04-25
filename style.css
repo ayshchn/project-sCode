@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+
+
+main {
+    height: 100vh;
+    overflow: hidden;
+
+    color: #fff;
+    background: #000;
+}
+
+/* styling the header */
+header nav {
+    margin: 35px 0px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 2.5em;
+    margin-left: 15px;
+    user-select: none;
+}
+#logo span {
+    font-size: .55em;
+    vertical-align: middle;
+}
+
+header nav ul {
+    display: flex;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a {
+    color: #bfb8b8;
+    margin: 0 25px;
+    transition: color 0.75s ease;
+}
+a:hover {
+    color: #fff;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* styling the gif */
+.main-image {
+    z-index: 99;
+    user-select: none;
+    transform: scale(0.75);
+}
+
+/* styling and positioning the social icon's */
+.social-media {
+    position: absolute;
+    left: 80vw;
+    bottom: 5vh;
+}
+.fa-brands {
+    margin: 0 15px;
+    color: #bfb8b8;
+    font-size: 1.75em;
+    transition: color 0.75s ease;
+}
+.fa-brands:hover {
+    color: #fff;
+}
+
+/* styling and positioning the headings */
+.heading-container {
+    position: absolute;
+    left: 22vw;
+    bottom: 25vh;
+}
+.heading {
+    font-size: 4em;
+    user-select: none;
+    color: yellow;
+
+}
+.main-para {
+    position: inherit;
+    user-select: none;
+
+    right: 8vw;
+    bottom: 35vh;
+    width: 500px;
+    font-size: 1.2em;
+    transform: rotate(-90deg);
+}
+
+
+/* queries */
+@media screen and (max-width: 768px) {
+    .main-image {
+        height: 450px;
+    }
+
+    .social-media {
+        left: 60vw;
+    }
+    .fa-brands {
+        font-size: 1.5em;
+    }
+
+    .heading-container {
+        left: 15vw;
+    }
+    .heading {
+        font-size: 2.5em;
+    }
+    .main-para {
+        right: -2vw;
+        bottom: 37.5vh;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    #logo {
+        font-size: 1.5em;
+    }   
+    #logo span {
+        font-size: 0.45em;
+    }
+
+    .main-image {
+        height: 400px;
+    }
+
+    header nav ul li a {
+        margin: 0 10px;
+    }
+
+    .social-media {
+        left: 25vw;
+    }
+
+    .heading-container {
+        left: 15vw;
+    }
+    .heading {
+        font-size: 1.5em;
+    }
+    .main-para {
+        right: -17vh;
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .main-image {
+        height: 300px;
+    }
+
+    header nav ul li a {
+        margin: 0 8px;
+        font-size: 12px;
+    }
+
+    .fa-brands {
+        margin: 0 5px;
+    }
+
+    .heading-container {
+        left: 25vw;
+        bottom: 40vh;
+    }
+    .main-para {
+        right: -21em;
+        bottom: 33.5em;
+        font-size: 0.55em;
+    }
+}
